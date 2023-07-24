@@ -3,6 +3,7 @@ import Main from "../../../LayOut/Main/main";
 import Home from "../../../FixedPages/Home/Home";
 import Blog from "../../../FixedPages/Blog/Blog";
 import Contact from "../../../FixedPages/ContactPage/Contact";
+import Resume from "../../../FixedPages/Resume/Resume";
 
 const routers =createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const routers =createBrowserRouter([
         {
             path:"/contact",
             element:<Contact></Contact>
+        },
+        {
+            path:"/resume",
+            element:<Resume></Resume>
         }
     ]
     }

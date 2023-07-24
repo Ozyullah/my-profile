@@ -21,7 +21,7 @@ const Header = () => {
                                         <li><a>Submenu 2</a></li>
                                     </ul>
                                 </li>
-                                <li><Link to={'/'}>Resume</Link></li>
+                                <li><Link to={'/resume'}>Resume</Link></li>
                                 <li><Link to={''}>CV</Link></li>
                             </ul>
                         </div>
@@ -39,7 +39,7 @@ const Header = () => {
                                     </ul>
                                 </details>
                             </li>
-                            <li><Link to={'/'}>Resume</Link></li>
+                            <li><Link to={'/resume'}>Resume</Link></li>
                             <li><Link to={''}>CV</Link></li>
                         </ul>
                     </div>

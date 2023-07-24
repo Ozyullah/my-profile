@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom';
 const Slider = () => {
     return (
         <div>
-            <img src={salam} alt="" className=' w-16 flex justify-items-center justify-center'/>
+            <div>
+            <img src={salam} alt="" className=' w-16'/>
+            </div>
             <div className="hero bg-base-100 shadow-lg">
                 
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -39,7 +41,7 @@ const Slider = () => {
                         <div>
                             <p className=' font-bold text-4xl'>hey i am devoloper i can build a website and i wait for your contact and you must be sure for your project</p>
                         </div>
-                        <Link to={'/contact'}><button className="btn btn-primary w-40 mt-5">Contact me <BsFillArrowRightCircleFill className='text-2xl'/></button></Link>
+                        <Link to={'/contact'}><button className="btn btn-info btn-outline w-40 mt-5">Contact me <BsFillArrowRightCircleFill className='text-2xl'/></button></Link>
                         
                     </div>
                     
