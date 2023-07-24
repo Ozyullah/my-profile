@@ -1,0 +1,4 @@
+.iconHover::before {
+    width: 5px;
+    background-color: black;
+}

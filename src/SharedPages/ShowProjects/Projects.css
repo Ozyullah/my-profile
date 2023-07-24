@@ -1,0 +1,17 @@
+.section-hidden{
+    display: none;
+    
+}
+
+.section-hover:hover{
+    /* width: 100%; */
+    .section-hidden{
+        display: block;
+        position: relative;
+        padding: 10px;
+        /* bottom: 110px; */
+        background: none;
+        /* top: -100px; */
+        
+    }
+}
