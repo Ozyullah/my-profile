@@ -23,13 +23,11 @@ const Slider = () => {
                             <TypeAnimation
                                 sequence={[
                                     // Same substring at the start will only be typed once, initially
-                                    `I am Developer`,
+                                    `I'm Developer`,
                                     1000,
-                                    'I am designer',
+                                    `I'm designer`,
                                     1000,
-                                    'I am business mentor',
-                                    1000,
-                                    'I am UI/UX designer',
+                                    `I'm UI/UX designer`,
                                     1000,
                                 ]}
                                 speed={50}

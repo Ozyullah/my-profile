@@ -21,7 +21,7 @@ const Projects = () => {
                         <h3 className=' text-center'>
                             Ecomerse web site
                         </h3>
-                        <p className=''>This website is best solution for your used products sell.And you can buy any products.</p>
+                        <p className=''>This website is for buying and selling used laptops and other products. Here a seller can add his product and advertise any product if needed. If there is a problem with any product , the buyer can report it, which the admin can take action on.</p>
                     </div>
 
 

@@ -10,7 +10,7 @@ const Comments = () => {
                     <input type="text" placeholder="Enter your name" className="input input-bordered w-full max-w-xs" required />
                 </div>
 
-                <textarea placeholder="Write your Text" className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
+                <textarea placeholder="Write your Text" className="textarea textarea-bordered text-sm textarea-lg w-full max-w-xs" ></textarea>
                 <button className='btn btn-info btn-outline'>Submite</button>
             </div>
         </div>
