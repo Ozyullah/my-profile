@@ -9,8 +9,11 @@ import uiuxlogo from '../../assets/images/UiUxLogo.png';
 import pyth from '../../assets/images/python.png';
 
 const MySkills = () => {
+    const color ="black"
     return (
-        <div style={{ backgroundImage: `url(${bgImage})`, backgroundSize:"45%" }}>
+        <div style={{ backgroundImage:`url(${bgImage})`, 
+        backgroundSize:"45%" }}
+        >
 
             <h2 className=" text-3xl font-semibold text-center text-white p-10 glass">My Skills</h2>
 
@@ -81,7 +84,7 @@ const MySkills = () => {
                     <div className="card-body">
                         <h2 className="card-title text-white">Python</h2>
                         <ProgressBar
-                            completed={1}
+                            completed={80}
                             labelColor="white"
                             height='15px'
                             bgColor='DodgerBlue'
