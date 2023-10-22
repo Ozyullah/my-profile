@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Slider = () => {
     return (
         <div>
-            <div>
+            <div className='flex justify-end'>
             <img src={salam} alt="" className=' w-16'/>
             </div>
             <div className="hero bg-base-100 shadow-lg">

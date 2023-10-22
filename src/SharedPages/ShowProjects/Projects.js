@@ -16,13 +16,14 @@ const Projects = () => {
                 <div className='section-hover hover:shadow-lg'>
                     <div>
                         <Link to={"https://used-productes.firebaseapp.com/"}><img src={usedProduct} alt='' className='rounded-lg'></img></Link>
+
                     </div>
                     <div className='section-hidden hover:glass'>
-                        <h3 className=' text-center'>
-                            Ecomerse web site
-                        </h3>
-                        <p className=''>This website is for buying and selling used laptops and other products. Here a seller can add his product and advertise any product if needed. If there is a problem with any product , the buyer can report it, which the admin can take action on.</p>
-                    </div>
+                            <h3 className=' text-center'>
+                                Ecomerse web site
+                            </h3>
+                            <p className=''>This website is for buying and selling used laptops and other products. Here a seller can add his product and advertise any product if needed. If there is a problem with any product , the buyer can report it, which the admin can take action on.</p>
+                        </div>
 
 
                 </div>
