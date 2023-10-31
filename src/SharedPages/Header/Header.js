@@ -14,6 +14,8 @@ const Header = () => {
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><Link to={'/'}>Home</Link></li>
+                                <li><Link to={'/about'}>About</Link></li>
+                                <li><Link to={'/projects'}>Projects</Link></li>
                                 <li>
                                     <a>Blogs</a>
                                     <ul className="p-2">
@@ -22,7 +24,7 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li><Link to={'/resume'}>Resume</Link></li>
-                                <li><Link to={''}>CV</Link></li>
+
                             </ul>
                         </div>
                         <Link to={"/"} className="btn btn-ghost normal-case text-xl"><img src={logoImg} alt="" className=" w-44" /></Link>
@@ -30,6 +32,8 @@ const Header = () => {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             <li><Link to={'/'}>Home</Link></li>
+                            <li><Link to={'/about'}>About</Link></li>
+                            <li><Link to={'/projects'}>Projects</Link></li>
                             <li tabIndex={0}>
                                 <details>
                                     <summary>Blogs</summary>
@@ -40,7 +44,7 @@ const Header = () => {
                                 </details>
                             </li>
                             <li><Link to={'/resume'}>Resume</Link></li>
-                            <li><Link to={''}>CV</Link></li>
+
                         </ul>
                     </div>
                     <div className="navbar-end">

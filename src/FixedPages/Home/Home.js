@@ -5,15 +5,24 @@ import Services from '../../SharedPages/Services/Services';
 import AboutMe from '../../SharedPages/SelfAbout/AboutMe';
 import Projects from '../../SharedPages/ShowProjects/Projects';
 import Comments from '../../SharedPages/Comments/Comments';
+import { Fade, LightSpeed, Roll, Bounce, Flash, Pulse, RubberBand, Pop, Slide, Spin, Swing } from 'react-swift-reveal';
+import Contact from '../ContactPage/Contact';
 const Home = () => {
     return (
         <div>
-            <Slider></Slider>
-            <AboutMe></AboutMe>
-            <MySkills></MySkills>
-            <Services></Services>
-            <Projects></Projects>
-            <Comments></Comments>
+
+            <Fade>
+                <Slider></Slider>
+                <AboutMe></AboutMe>
+            </Fade>
+            <Slide>
+                <MySkills></MySkills>
+                <Services></Services>
+                <Projects></Projects>
+            </Slide>
+            <Roll>
+                <Contact></Contact>
+            </Roll>
         </div>
     );
 };
