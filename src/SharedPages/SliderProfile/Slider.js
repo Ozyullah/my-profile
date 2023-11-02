@@ -6,70 +6,19 @@ import salam from '../../assets/images/salam.png';
 import './Slider.css';
 import { Link } from 'react-router-dom';
 // import bganimation from '../../assets/images/stars animated.mp4';
-import sliderAnimation from '../../assets/images/day animation.mp4';
+// import sliderAnimation from '../../assets/images/day animation.mp4';
 
 const Slider = () => {
     return (
         <div className='slider-body'>
-            <div>
+            <div >
                 {/* <div className=' sm:hidden layerOver'></div> */}
                 {/* <video className='bgSlide' src={sliderAnimation} autoPlay loop muted></video> */}
-
-                <div class="stars">
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                    <div class="star"></div>
-                </div>
             </div>
             <div>
-                <img src={salam} alt="" className='w-16 flex justify-end' />
+                <div className='flex justify-end'>
+                <img src={salam} alt="" className='w-16 ' />
+                </div>
                 <div className="hero bg-base-100 shadow-lg">
 
                     <div className="hero-content flex-col lg:flex-row-reverse">
@@ -77,9 +26,9 @@ const Slider = () => {
                             
                         </div> */}
 
-                        <div className=' w-1/2 ml-10 rounded-s-full flex justify-end' >
+                        <div className=' w-1/2 ml-10 md:flex lg:flex  md:justify-center lg:justify-end'>
 
-                            <img src={image} alt='' className=" w-72 rounded-lg shadow-2xl border-spacing-5 border-orange-300" style={{ borderRadius: '40% 40% 0 0' }} />
+                            <img src={image} alt='' className=" w-52 shadow-2xl border-spacing-5 border-orange-300" style={{ borderRadius: '40%' }} />
                         </div>
                         <div className='grid w-1/2'>
                             <div className=' text-sky-600'>

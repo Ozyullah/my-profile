@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 
 const AboutMe = () => {
     return (
-        <div className="card card-side bg-base-100 shadow-xl grid pb-10">
-            <h2 className=' text-center p-10 border border-x-8 border-x-sky-400'>About Me</h2>
+        <div className=" bg-base-100 shadow-xl grid pb-10">
+            <h2 className=' text-center p-10'>About Me</h2>
             <div className=' lg:justify-center lg:flex sm:grid md:grid'>
-                
-                <div className='flex justify-center items-center w-1/2'>
-                <div className=' border border-solid border-sky-500'>
-                <figure><img src={selfImage} alt="" className=' w-36'/></figure>
-                </div>
-                </div>
-                <div className="w-1/2 card-body ">
 
-                    <div className='flex justify-between sm:grid sm:grid-flow-col' style={{fontFamily:"'EB Garamond', serif"}}>
+
+                <div className='lg:w-1/2 flex justify-center items-center'>
+                    <figure className='w-52'><img src={selfImage} alt="" className=' w-48 border border-solid border-sky-500' /></figure>
+                </div>
+
+                <div className="lg:w-1/2 card-body">
+
+                    <div className='lg:flex lg:justify-between sm:grid ' style={{ fontFamily: "'EB Garamond', serif" }}>
                         <div>
                             <p className='mb-2'><span className='text-sky-400'>Name:</span> Md.Habibullah</p>
                             <p className='mb-2'><span className='text-sky-400'>BirthDate:</span> 07th May 2000</p>
@@ -32,7 +32,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <Link className="btn-info btn-outline flex gap-2 rounded-lg p-2">Watch my CV <RxResume/> <hr/></Link>
+                        <Link className="btn-info btn-outline flex gap-2 rounded-lg p-2">Watch my CV <RxResume /> <hr /></Link>
                     </div>
                 </div>
             </div>
