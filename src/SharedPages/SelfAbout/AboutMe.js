@@ -1,17 +1,17 @@
 import React from 'react';
-import selfImage from '../../assets/images/ozy.jpg'
+import selfImage from '../../assets/images/habib.jpg'
 import { RxResume } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 
 const AboutMe = () => {
     return (
         <div className=" bg-base-100 shadow-xl grid pb-10">
-            <h2 className=' text-center p-10'>About Me</h2>
+            <h2 className=' text-center text-2xl p-10 font-serif'>About Me</h2>
             <div className=' lg:justify-center lg:flex sm:grid md:grid'>
 
 
                 <div className='lg:w-1/2 flex justify-center items-center'>
-                    <figure className='w-52'><img src={selfImage} alt="" className=' w-48 border border-solid border-sky-500' /></figure>
+                    <figure className='w-52'><img src={selfImage} alt="" className=' w-48 rounded-full border border-solid border-sky-500' /></figure>
                 </div>
 
                 <div className="lg:w-1/2 card-body">

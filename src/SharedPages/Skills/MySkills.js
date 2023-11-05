@@ -16,7 +16,7 @@ const MySkills = () => {
         backgroundSize:"45%", backgroundAttachment:"fixed", backgroundRepeat:"no-repeat", backgroundPosition:"center", backgroundSize:"cover"}}
         >
 
-            <h2 className=" text-3xl font-semibold text-center text-white p-5">My Skills</h2>
+            <h2 className=" text-2xl font-serif text-center text-white p-5">My Skills</h2>
 
 
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 p-8'>

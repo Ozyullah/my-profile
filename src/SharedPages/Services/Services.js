@@ -3,7 +3,7 @@ import React from 'react';
 import developmentIcon from '../../assets/images/development.png';
 import design from '../../assets/images/designer.png';
 import res from '../../assets/images/responcive.png';
-import { TypeAnimation } from 'react-type-animation';
+// import { TypeAnimation } from 'react-type-animation';
 import Marquee from 'react-fast-marquee';
 import maintainence from '../../assets/images/website-Maintenance.png';
 import './Services.css';
@@ -11,7 +11,7 @@ import './Services.css';
 const Services = () => {
     return (
         <div className=' p-10'>
-            <h2 className='text-2xl text-center'>Services</h2>
+            <h2 className='text-2xl text-center font-serif'>Services</h2>
 
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5'>
                 <div className="card card-border bg-base-500 shadow-xl">

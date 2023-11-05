@@ -1,8 +1,26 @@
-import React from 'react';
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { IoIosMailOpen } from 'react-icons/io';
+import './Contact.css';
+// import { Form } from 'react-router-dom';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_9dub4ra', 'template_ms5my54', form.current, 'wSgiyP5XFSIy25aZh')
+            .then((result) => {
+                console.log(result.text)
+            },
+                (error) => {
+                    console.log(error.text)
+                });
+
+
+    }
     return (
         <div className='p-10'>
             <h2 className=' text-center pb-3 font-serif'>Contact me</h2>
@@ -11,18 +29,33 @@ const Contact = () => {
                 <div className='lg:flex lg:justify-center lg:justify-evenly md:grid md:place-items-center sm:grid sm:place-items-center'>
                     <h3 className='flex gap-2'><IoIosMailOpen className='text-sky-500' /> md.habibullah7520@gmail.com</h3>
 
-                    <h3 className='flex gap-2'><FaPhoneAlt className='text-sky-500'/> +8801609111813</h3>
+                    <h3 className='flex gap-2'><FaPhoneAlt className='text-sky-500' /> +8801609111813</h3>
                 </div>
             </div>
-            <div className='grid justify-center gap-5 pt-10'>
-                <div className='flex space-x-5'>
-                    <input type="email" placeholder="Enter your email address" className="input input-bordered w-full max-w-xs" required />
-                    <input type="text" placeholder="Enter your name" className="input input-bordered w-full max-w-xs" required />
+            <form ref={form} onSubmit={sendEmail} className='grid place-content-center gap-10 pt-10'>
+
+                <div>
+                   
+                    <input type="email" name='email' placeholder='Email' className="input-field" required />
+
+                    <label id='email-lebel' className='input-lebel'>Email</label>
                 </div>
 
-                <textarea placeholder="Write your massege" className="textarea textarea-bordered text-sm textarea-lg w-full max-w-xs" ></textarea>
-                <button className='btn btn-info btn-outline'>Send</button>
-            </div>
+                <div>
+                    
+                    <input type="text" name='name' placeholder="" className="input-field" required />
+
+                    <label id='name-sector' className='input-lebel'>Name</label>
+                </div>
+
+                <div>
+                    
+                    <textarea name='message' placeholder="Write your messege"  className="textarea text-sm max-w-xs input-field" required></textarea>
+
+                    <label id='message-lebel' className='input-lebel'>Message</label>
+                </div>
+                <input type='submit' value='send' className='btn btn-info btn-outline w-60' />
+            </form>
         </div>
     );
 };

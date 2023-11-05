@@ -1,0 +1,93 @@
+.input-field{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 250px;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 0.9rem;
+    color: #211f1f;
+    padding: 9px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+
+    &::placeholder {
+        color: transparent;
+      }
+    
+      &:placeholder-shown ~ #email-lebel {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 150px;
+      }
+
+        /* name */
+      &:placeholder-shown ~ #name-sector {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 230px;
+      }
+
+      /* message */
+
+      &:placeholder-shown ~ #message-lebel {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 290px;
+      }
+}
+
+.input-lebel{
+    position: absolute;
+    top: 150px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: rgb(80, 80, 80);
+}
+
+.input-field:focus{
+    ~ #email-lebel{
+        position: absolute;
+        top: 130px;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: rgba(51, 154, 195, 0.873);
+        font-weight: 700;
+    }
+
+    /* name */
+    ~ #name-sector{
+        position: absolute;
+        top: 210px;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: rgba(51, 154, 195, 0.873);
+        font-weight: 700;
+    }
+
+    /* message dection */
+
+    ~ #message-lebel{
+        position: absolute;
+        top: 275px;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: rgba(51, 154, 195, 0.873);
+        font-weight: 700;
+    }
+
+
+    padding-bottom: 6px;
+    font-weight: 400;
+    border-width: 3px;
+    border-image: linear-gradient(to right,rgba(9, 175, 240, 0.873),rgba(51, 154, 195, 0.873));
+    border-image-slice: 1;
+}
+
+.input-field{
+    &:required,&:invalid{ box-shadow: none;}
+}
