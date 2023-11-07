@@ -23,7 +23,7 @@ const Contact = () => {
     }
     return (
         <div className='p-10'>
-            <h2 className=' text-center pb-3 font-serif'>Contact me</h2>
+            <h2 className='text-2xl text-center pb-3 font-serif'>Contact me</h2>
 
             <div>
                 <div className='lg:flex lg:justify-center lg:justify-evenly md:grid md:place-items-center sm:grid sm:place-items-center'>
@@ -50,7 +50,7 @@ const Contact = () => {
 
                 <div>
                     
-                    <textarea name='message' placeholder="Write your messege"  className="textarea text-sm max-w-xs input-field" required></textarea>
+                    <textarea name='message' placeholder="Write your messege"  className=" text-sm max-w-xs input-field" required></textarea>
 
                     <label id='message-lebel' className='input-lebel'>Message</label>
                 </div>

@@ -20,3 +20,51 @@
     /* background-color: rgba(0, 0, 0, 0); */
     background-color: #0000;
 }
+
+
+.blur-sector{
+    position: absolute;
+    width: 15rem;
+    height: 14rem;
+    border-radius: 50%;
+    z-index: -9;
+    filter: blur(90px);
+    
+}
+
+#blur-position{
+    background: rgb(199, 210, 119);
+    top: 80px;
+    right: 0;
+}
+
+#blur-position2{
+    background: rgb(98, 184, 219);
+    bottom: 100px;
+    left: 0;
+}
+
+
+/* .image-des{
+    flex: 1;
+    position: relative;
+}
+
+.image-des>*{
+    position: absolute;
+}
+
+
+.image-des>:nth-child(1){
+    top: 0;
+    transform: scale(1);
+
+}
+
+.image-des>:nth-child(2){
+    bottom: -130px;
+    right: 0;
+    left: 175px;
+} */
+
+
