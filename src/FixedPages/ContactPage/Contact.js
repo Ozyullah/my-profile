@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { IoIosMailOpen } from 'react-icons/io';
+import contactIMG from '../../assets/images/contact.png';
 import './Contact.css';
 // import { Form } from 'react-router-dom';
 
@@ -32,7 +33,11 @@ const Contact = () => {
                     <h3 className='flex gap-2'><FaPhoneAlt className='text-sky-500' /> +8801609111813</h3>
                 </div>
             </div>
-            <form ref={form} onSubmit={sendEmail} className='grid place-content-center gap-10 pt-10'>
+            <div className=' lg:flex md:flex sm:grid sm:gap-y-4'>
+                <div className=' w-1/2'>
+                    <img src={contactIMG} alt="" className=' ' />
+                </div>
+                <form ref={form} onSubmit={sendEmail} className='grid place-content-center gap-10 pt-10 w-1/2'>
 
                 <div>
                    
@@ -56,6 +61,7 @@ const Contact = () => {
                 </div>
                 <input type='submit' value='send' className='btn btn-info btn-outline w-60' />
             </form>
+            </div>
         </div>
     );
 };

@@ -74,7 +74,7 @@ const Slider = () => {
                                 <div>
                                     <p className=' font-serif'>As a computer science & engineering student, my career goal is to apply my knowledge and skills to develop innovative solutions that solve real-world problems. I aim to contribute to the field of technology by designing and implementing software applications that enhance efficiency, security and user experience. My goal is to continuously learn and adapt to emerging technologies while collaborating with diverse teams to create impactful and sustainable solutions in the ever-evolving world of computer science.</p>
                                 </div>
-                                <Link to={'/contact'}><button className="btn btn-info btn-outline w-40 mt-5">Contact me <BsFillArrowRightCircleFill className='text-2xl' /></button></Link>
+                                <Link to={'/contact'}><button className="btn btn-info btn-outline rounded-full mt-5">Contact me <BsFillArrowRightCircleFill className='text-2xl' /></button></Link>
                             </div>
 
                         </div>

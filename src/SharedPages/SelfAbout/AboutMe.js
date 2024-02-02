@@ -27,12 +27,12 @@ const AboutMe = () => {
                             <p className='mb-2'><span className='text-sky-400'>Nationality:</span> Bangladeshi</p>
                             <p className='mb-2'><span className='text-sky-400'>Job Availbility:</span> Part-time</p>
                             <p className='mb-2'><span className='text-sky-400'>Email:</span> md.habibullah7520@gmail.com</p>
-                            <p className='mb-2'><span className='text-sky-400'>phone:</span> +8801609111813</p>
+                            <p className='mb-2'><span className='text-sky-400'>phone:</span> +8801609-111813</p>
                             <p></p>
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <Link className="btn-info btn-outline flex gap-2 rounded-lg p-2">Watch my CV <RxResume /> <hr /></Link>
+                        <Link className="btn-info btn-outline flex gap-2 rounded-full p-2">Watch my CV <RxResume /> <hr /></Link>
                     </div>
                 </div>
             </div>
