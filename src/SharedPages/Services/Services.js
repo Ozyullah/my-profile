@@ -15,7 +15,7 @@ const Services = () => {
 
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5'>
                 <div className="card card-border bg-base-500 shadow-xl">
-                    <img src={design} alt='' className=' w-36'></img>
+                    <img src={design} alt='' className=' w-20'></img>
                     <div className="card-body">
                         <h2 className="card-title">Web Design</h2>
                         <p className='p-text'>I provide professional and innovative website design and development services to help businesses and achieve their digital gools.</p>
@@ -31,7 +31,7 @@ const Services = () => {
 
                 <div className="card card-border bg-base-100 shadow-xl">
                     {/* <h1><LiaConnectdevelop className='text-5xl w-10 ml-5'/></h1> */}
-                    <img src={developmentIcon} alt='' className=' w-36'></img>
+                    <img src={developmentIcon} alt='' className=' w-20'></img>
                     <div className="card-body">
                         <h2 className="card-title">Web Application</h2>
                         <p className='p-text'>I'm a detail-oriented web developer, passionate about creating engaging applications that drive business success.</p>
@@ -46,7 +46,7 @@ const Services = () => {
 
 
                 <div className="card card-border bg-base-100 shadow-xl">
-                    <img src={res} alt='' className=' w-40'></img>
+                    <img src={res} alt='' className=' w-20'></img>
                     <div className="card-body">
                         <h2 className="card-title">Responsive Design</h2>
                         <p className='p-text'>As a skilled web developer. I craft visually engaging and user-friendly websites through responsive design techniques</p>
@@ -62,7 +62,7 @@ const Services = () => {
 
 
                 <div className="card card-border bg-base-100 shadow-xl">
-                    <img src={maintainence} alt='' className=' w-40'></img>
+                    <img src={maintainence} alt='' className=' w-20'></img>
                     <div className="card-body">
                         <h2 className="card-title text-2px">Website Maintenance and Support</h2>
                         <p className='p-text'>As a dedicated WebSite Maintenance and Support professional, I excel in providing assistance and ensuring seamless online experiences for clients</p>
