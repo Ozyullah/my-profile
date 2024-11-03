@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../assets/images/profile pic.png';
+import image from '../../assets/images/habibullah.jpg';
 import imgObject from '../../assets/images/profileBg.png';
 import { TypeAnimation } from 'react-type-animation';
 import { BsFillArrowRightCircleFill, VscPreview } from 'react-icons/bs';
@@ -35,7 +35,7 @@ const Slider = () => {
 
                             {/* <img className=' w-52 -z-10 top-72' src={imgObject} alt="" /> */}
 
-                            <img src={image} alt='' className=" w-52 left-36 border-spacing-5 border-orange-300" style={{ borderRadius: '40%', }} />
+                            <img src={image} alt='' className=" w-96 left-36 border-x-4 border-orange-300" style={{ borderRadius: '50%', }} />
 
                             <div id='blur-position' className='blur-sector'>
                             </div>
@@ -44,14 +44,14 @@ const Slider = () => {
                         </div>
                         <div className='w-1/2 flex'>
                             <div className='p-5'>
-                                <a href="" className=''><TiSocialLinkedinCircular  className='mb-2 text-sky-400'/></a>
-                                <a href="" className=''><MdOutlineFacebook className='mb-2 text-sky-400'/></a>
+                                <a href="" className=''><TiSocialLinkedinCircular className='mb-2 text-sky-400' /></a>
+                                <a href="" className=''><MdOutlineFacebook className='mb-2 text-sky-400' /></a>
 
-                                <a href=""><IoLogoWhatsapp className='mb-2 text-green-400'/></a>
+                                <a href=""><IoLogoWhatsapp className='mb-2 text-green-400' /></a>
 
-                                <a href=""><ImTwitter className='mb-2 text-sky-400'/></a>
+                                <a href=""><ImTwitter className='mb-2 text-sky-400' /></a>
 
-                                <a href=""><IoIosMailOpen/></a>
+                                <a href=""><IoIosMailOpen /></a>
                             </div>
                             <div>
                                 <div className=' text-sky-600'>

@@ -30,7 +30,7 @@ const Contact = () => {
                 <div className='lg:flex lg:justify-center lg:justify-evenly md:grid md:place-items-center sm:grid sm:place-items-center'>
                     <h3 className='flex gap-2'><IoIosMailOpen className='text-sky-500' /> md.habibullah7520@gmail.com</h3>
 
-                    <h3 className='flex gap-2'><FaPhoneAlt className='text-sky-500' /> +8801609111813</h3>
+                    <h3 className='flex gap-2'><FaPhoneAlt className='text-sky-500' /> +8801609-111813</h3>
                 </div>
             </div>
             <div className=' lg:flex md:flex sm:grid sm:gap-y-4'>

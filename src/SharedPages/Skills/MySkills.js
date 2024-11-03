@@ -13,7 +13,7 @@ const MySkills = () => {
     const color ="black"
     return (
         <div style={{ backgroundImage:`linear-gradient(to bottom, rgba(54, 46, 46, 0.527),rgba(54, 46, 46, 0.527)), url(${bgImage})`, 
-        backgroundSize:"45%", backgroundAttachment:"fixed", backgroundRepeat:"no-repeat", backgroundPosition:"center", backgroundSize:"cover"}}
+         backgroundRepeat:"no-repeat", backgroundPosition:"center", backgroundSize:"cover"}}
         >
 
             <h2 className=" text-2xl font-serif text-center text-white p-5">My Skills</h2>

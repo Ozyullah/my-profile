@@ -36,12 +36,15 @@
     background: rgb(199, 210, 119);
     top: -30px;
     right: 0px;
+    
+    /* translate: 1s; */
 }
 
 #blur-position2{
     background: rgb(98, 184, 219);
-    bottom: 100px;
+    bottom: -100px;
     left: 0;
+    /* transform:scaleX(10); */
 }
 
 
