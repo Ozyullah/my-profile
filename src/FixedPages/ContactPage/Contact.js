@@ -36,10 +36,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="p-6 md:p-12 bg-gradient-to-r from-sky-50 to-white rounded-2xl max-w-6xl mx-auto">
+    <div className="p-6 md:p-12  bg-gradient-to-r from-sky-50 to-white rounded-2xl max-w-6xl max-h-screen mx-auto">
       <h2 className="text-3xl font-bold text-center pb-6 font-serif text-sky-700">
-        Contact Me
-        <span className="absolute left-1/2 -bottom-2 w-20 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
+        Contact Me<span className="absolute left-1/2 -bottom-2 w-20 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
+        
       </h2>
 
       {/* contact info */}

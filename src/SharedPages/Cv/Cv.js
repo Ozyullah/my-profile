@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import CvFile from "../../assets/images/habibullahCv.pdf"; // place the PDF inside /src/assets
 import { IoIosMailOpen } from "react-icons/io";
+import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FiCheck, FiDownload } from "react-icons/fi";
 
 const Cv = () => {
+  const [isDownloaded, setIsDownloaded] = useState(false);
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = CvFile;
+    link.download = "Habibullah_CV.pdf";
+    link.click();
+    setIsDownloaded(true);
+
+    // reset state after 2 seconds
+    setTimeout(() => setIsDownloaded(false), 2000);
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg text-gray-800 leading-relaxed">
       {/* Header */}
@@ -36,15 +51,25 @@ const Cv = () => {
         </div>
 
         {/* Download CV Button */}
-        <div className="mt-5">
-          <a
-            href={CvFile}
-            download="Habibullah_CV.pdf"
-            className="px-5 py-2 bg-sky-600 text-white rounded-lg shadow hover:bg-sky-700 transition"
-          >
-            ⬇️ Download CV
-          </a>
-        </div>
+       <motion.div
+      className="mt-6 flex justify-center"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
+      <motion.button
+        onClick={handleDownload}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className={`flex items-center gap-2 px-6 py-2 rounded-lg text-white font-medium shadow-md transition-all duration-200 ${
+          isDownloaded
+            ? "bg-green-500 hover:bg-green-600"
+            : "bg-sky-600 hover:bg-sky-700"
+        }`}
+      >
+        {isDownloaded ? <FiCheck size={20} /> : <FiDownload size={20} />}
+        <span>{isDownloaded ? "Downloaded!" : "Download CV"}</span>
+      </motion.button>
+    </motion.div>
       </div>
 
       {/* Education */}

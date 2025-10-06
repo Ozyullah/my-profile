@@ -54,9 +54,9 @@ const Slider = () => {
           className="relative"
         >
            {/* ==== Background Abstract Tall Shapes ==== */}
-      <div className="absolute w-[400px] h-[700px] bg-orange-500 rounded-[200px] blur-3xl opacity-40 rotate-[30deg] top-[-100px] right-[150px] mix-blend-multiply"></div>
-      <div className="absolute w-[350px] h-[650px] bg-blue-600 rounded-[180px] blur-3xl opacity-40 rotate-[-25deg] bottom-[-100px] left-[150px] mix-blend-multiply"></div>
-      <div className="absolute w-[280px] h-[600px] bg-gray-700 rounded-[150px] blur-3xl opacity-30 rotate-[10deg] bottom-[0px] right-[100px] mix-blend-multiply"></div>
+      <div className="absolute w-[400px] h-[700px] bg-orange-500 rounded-[200px] blur-2xl opacity-40 rotate-[30deg] top-[-100px] right-[150px] mix-blend-multiply"></div>
+      <div className="absolute w-[350px] h-[650px] bg-blue-600 rounded-[180px] blur-2xl opacity-40 rotate-[-25deg] bottom-[-100px] left-[150px] mix-blend-multiply"></div>
+      <div className="absolute w-[280px] h-[600px] bg-gray-700 rounded-[150px] blur-2xl opacity-30 rotate-[10deg] bottom-[0px] right-[100px] mix-blend-multiply"></div>
           <img
             src={image}
             alt="Model"

@@ -74,7 +74,7 @@ const AboutMe = () => {
         About Me
         <span className="absolute left-1/2 -bottom-2 w-20 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
       </h2>
-      <p className='text-center text-gray-600 mb-10 px-4 md:px-20 lg:px-40 w-[50%] mx-auto'>
+      <p className='text-start md:text-center lg:text-center text-gray-600 mb-10 px-2 md:px-20 lg:px-40 w-full lg:w-[50%] mx-auto'>
         Motivated and detail-oriented Junior Web Developer with a strong
           foundation in front-end and back-end technologies. Passionate
           about building responsive, user-friendly web applications and
