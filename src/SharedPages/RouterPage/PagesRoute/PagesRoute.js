@@ -7,6 +7,7 @@ import Resume from "../../../FixedPages/Resume/Resume";
 import Comments from "../../Comments/Comments";
 import Projects from "../../ShowProjects/Projects";
 import AboutMe from "../../SelfAbout/AboutMe";
+import Cv from "../../Cv/Cv";
 
 const routers =createBrowserRouter([
     {
@@ -39,6 +40,10 @@ const routers =createBrowserRouter([
         {
             path:"/about",
             element:<AboutMe></AboutMe>
+        },
+        {
+            path:"/habibcv",
+            element:<Cv></Cv>
         }
     ]
     }

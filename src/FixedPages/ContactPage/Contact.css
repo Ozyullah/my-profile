@@ -1,93 +1,145 @@
-.input-field{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 250px;
-    border: 0;
-    border-bottom: 2px solid gray;
-    outline: 0;
-    font-size: 0.9rem;
-    color: #211f1f;
-    padding: 9px 0;
-    background: transparent;
-    transition: border-color 0.2s;
-
-
-    &::placeholder {
-        color: transparent;
-      }
-    
-      &:placeholder-shown ~ #email-lebel {
-        font-size: 1.3rem;
-        cursor: text;
-        top: 150px;
-      }
-
-        /* name */
-      &:placeholder-shown ~ #name-sector {
-        font-size: 1.3rem;
-        cursor: text;
-        top: 230px;
-      }
-
-      /* message */
-
-      &:placeholder-shown ~ #message-lebel {
-        font-size: 1.3rem;
-        cursor: text;
-        top: 290px;
-      }
+/* Layout */
+.contact-wrapper {
+  padding: 3rem 1.5rem;
+  background: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.input-lebel{
-    position: absolute;
-    top: 150px;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: rgb(80, 80, 80);
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: serif;
+  font-weight: bold;
+  color: #1e293b;
 }
 
-.input-field:focus{
-    ~ #email-lebel{
-        position: absolute;
-        top: 130px;
-        display: block;
-        transition: 0.2s;
-        font-size: 1rem;
-        color: rgba(51, 154, 195, 0.873);
-        font-weight: 700;
-    }
-
-    /* name */
-    ~ #name-sector{
-        position: absolute;
-        top: 210px;
-        display: block;
-        transition: 0.2s;
-        font-size: 1rem;
-        color: rgba(51, 154, 195, 0.873);
-        font-weight: 700;
-    }
-
-    /* message dection */
-
-    ~ #message-lebel{
-        position: absolute;
-        top: 275px;
-        display: block;
-        transition: 0.2s;
-        font-size: 1rem;
-        color: rgba(51, 154, 195, 0.873);
-        font-weight: 700;
-    }
-
-
-    padding-bottom: 6px;
-    font-weight: 400;
-    border-width: 3px;
-    border-image: linear-gradient(to right,rgba(9, 175, 240, 0.873),rgba(51, 154, 195, 0.873));
-    border-image-slice: 1;
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.input-field{
-    &:required,&:invalid{ box-shadow: none;}
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.icon {
+  color: #0284c7;
+  font-size: 1.3rem;
+}
+
+/* Content Section */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.form-group {
+  position: relative;
+}
+
+/* Keeping your input style */
+.input-field {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 0.9rem;
+  color: #211f1f;
+  padding: 9px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.input-field::placeholder {
+  color: transparent;
+}
+
+.input-lebel {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: 0.2s ease;
+  font-size: 1rem;
+  color: #505050;
+  pointer-events: none;
+}
+
+.input-field:focus ~ .input-lebel,
+.input-field:not(:placeholder-shown) ~ .input-lebel {
+  top: -15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(51, 154, 195, 0.873);
+}
+
+/* Textarea adjustments */
+.textarea-field {
+  min-height: 80px;
+  resize: none;
+}
+
+/* Button */
+.btn-submit {
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  color: white;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+/* loader spinner */
+.loader {
+  border: 3px solid #d1e9ff;
+  border-top: 3px solid #0284c7;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }

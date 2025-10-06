@@ -13,16 +13,16 @@ const Home = () => {
 
             <Fade>
                 <Slider></Slider>
+                <Services></Services>
                 <AboutMe></AboutMe>
             </Fade>
             <Slide>
                 <MySkills></MySkills>
-                <Services></Services>
                 <Projects></Projects>
             </Slide>
-            <Roll>
+            <Pop>
                 <Contact></Contact>
-            </Roll>
+            </Pop>
         </div>
     );
 };

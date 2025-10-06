@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "my-profile-55a9d",
     "public": "build",
     "ignore": [
       "firebase.json",

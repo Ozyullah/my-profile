@@ -7,7 +7,9 @@ import Headroom from "react-headroom";
 const main = () => {
     return (
         <div>
-            <Headroom><Header></Header></Headroom>
+            <Headroom> 
+                <Header className=' bottom-[50%]'></Header>
+                </Headroom>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

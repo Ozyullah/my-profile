@@ -1,104 +1,120 @@
-import React from 'react';
-import bgImage from '../../assets/images/sliderImage.jpg';
-import javalogo from '../../assets/images/javalogo.png'
-// import { CProgress } from '@coreui/react';
-// import { Progress } from 'flowbite-react';
-import ProgressBar from '@ramonak/react-progress-bar';
-import mernLogo from '../../assets/images/mernStack.png';
-import uiuxlogo from '../../assets/images/UiUxLogo.png';
-import pyth from '../../assets/images/python.png';
-import './MySkills.css';
+import React, { useEffect, useState } from "react";
+import bgImage from "../../assets/images/sliderImage.jpg";
+import javalogo from "../../assets/images/javalogo.png";
+import mernLogo from "../../assets/images/mernStack.png";
+import uiuxlogo from "../../assets/images/UiUxLogo.png";
+import pyth from "../../assets/images/python.png";
+import ProgressBar from "@ramonak/react-progress-bar";
+import "./MySkills.css";
+
+const SkillCard = ({ logo, title, skills }) => {
+  const [progressValues, setProgressValues] = useState(skills.map(() => 0));
+
+  // Animate counter
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgressValues((prev) =>
+        prev.map((val, i) =>
+          val < skills[i].level ? val + 1 : skills[i].level
+        )
+      );
+    }, 15);
+
+    return () => clearInterval(interval);
+  }, [skills]);
+
+  return (
+    <div className="skill-card" data-aos="fade-up">
+      <div className="icon-wrap">
+        <img src={logo} alt={title} className="icon-img" />
+      </div>
+      <h3 className="skill-title">{title}</h3>
+
+      <div className="space-y-6 w-full">
+        {skills.map((skill, i) => (
+          <div key={i}>
+            <div className="flex justify-between text-sm mb-1">
+              <span className="skill-label">{skill.name}</span>
+              <span className="skill-percent">{progressValues[i]}%</span>
+            </div>
+            <ProgressBar
+              completed={progressValues[i]}
+              height="16px"
+              animateOnRender
+              baseBgColor="rgba(255,255,255,0.15)"
+              labelAlignment="outside"
+              borderRadius="12px"
+              transitionDuration="0.6s"
+              customLabel=" "
+              bgColor="transparent"
+              className="relative overflow-hidden rounded-lg"
+              barContainerClassName="rounded-lg overflow-hidden"
+              completedClassName="gradient-bar"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const MySkills = () => {
-    const color ="black"
-    return (
-        <div style={{ backgroundImage:`linear-gradient(to bottom, rgba(54, 46, 46, 0.527),rgba(54, 46, 46, 0.527)), url(${bgImage})`, 
-         backgroundRepeat:"no-repeat", backgroundPosition:"center", backgroundSize:"cover"}}
-        >
+  const skillsData = [
+    {
+      logo: mernLogo,
+      title: "Full Stack Development",
+      skills: [{ name: "MERN Stack", level: 95 }],
+    },
+    {
+      logo: javalogo,
+      title: "Java",
+      skills: [
+        { name: "Java Language", level: 50 },
+        { name: "OOP Concepts", level: 80 },
+      ],
+    },
+    {
+      logo: uiuxlogo,
+      title: "UI / UX Design",
+      skills: [{ name: "Design Skills", level: 20 }],
+    },
+    {
+      logo: pyth,
+      title: "Python",
+      skills: [{ name: "Core Python", level: 80 }],
+    },
+  ];
 
-            <h2 className=" text-2xl font-serif text-center text-white p-5">My Skills</h2>
+  return (
+    <section
+      style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(10,10,15,0.9), rgba(10,10,15,0.9)), url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      className="py-20 w-10/12 mx-auto"
+      id="skills"
+    >
+      {/* Section Title */}
+      <div className="text-center mb-16">
+        <h2 className="section-title">
+          My <span className="highlight">Skills</span>
 
+          <span className="absolute left-1/2 -bottom-2 w-20 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
+        </h2>
+        <p className="section-subtitle">
+          A blend of development and design expertise
+        </p>
+      </div>
 
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 p-8'>
-                <div className="card glass">
-                    <figure><img src={mernLogo} alt="car!" className=' w-32' /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-white">Full Stack Development(MERN)</h2>
-                        <ProgressBar
-                            completed={95}
-                            labelColor="white"
-                            height='15px'
-                            bgColor='DodgerBlue'
-                        />
-
-                    </div>
-                </div>
-
-
-
-                <div className="card glass">
-                    <figure><img src={javalogo} alt="car!" className=' w-32' /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-white">JAVA</h2>
-                        <div>
-                            <h3 className='text-white'>Java Language</h3>
-                            <ProgressBar
-                            completed={50}
-                            labelColor="white"
-                            height='15px'
-                            bgColor='DodgerBlue'
-                        />
-                        </div>
-                        <div>
-                            <h2 className='text-white'>OOP Concepts</h2>
-                            <ProgressBar
-                            completed={80}
-                            labelColor="white"
-                            height='15px'
-                            bgColor='DodgerBlue'
-                        />
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-
-                <div className="card glass">
-                    <figure><img src={uiuxlogo} alt="car!" className=' w-32' /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-white text-center">UI/UX</h2>
-                        <ProgressBar
-                            completed={20}
-                            labelColor="white"
-                            height='15px'
-                            bgColor='DodgerBlue'
-                        />
-
-                    </div>
-                </div>
-
-
-                <div className="card glass">
-                    <figure><img src={pyth} alt="car!" className=' w-32' /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-white">Python</h2>
-                        <ProgressBar
-                            completed={80}
-                            labelColor="white"
-                            height='15px'
-                            bgColor='DodgerBlue'
-                        />
-
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    );
+      {/* Grid */}
+      <div className="skills-grid">
+        {skillsData.map((skillSet, idx) => (
+          <SkillCard key={idx} {...skillSet} />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default MySkills;
