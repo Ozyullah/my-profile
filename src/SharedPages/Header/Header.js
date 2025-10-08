@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -7,24 +8,27 @@ import {
   FiFileText,
   FiBookOpen,
 } from "react-icons/fi";
+import { PiWhatsappLogoBold } from "react-icons/pi";
 import logoImg from "../../assets/images/cover.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaBlog } from "react-icons/fa";
+import { FcAbout } from "react-icons/fc";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  // ✅ Radial buttons configuration
+  //  Radial buttons configuration
   const buttons = [
-    { label: "About", to: "/#aboutme", icon: <FiUser size={22} />, angle: 200 },
+    { label: "About", to: "/about", icon: <FcAbout size={22}/>, angle: 200 },
     { label: "Projects", to: "/projects", icon: <FiBookOpen size={22} />, angle: 230 },
     { label: "Resume", to: "/resume", icon: <FiFileText size={22} />, angle: 310 },
-    { label: "Blog", to: "/blog", icon: <FiHome size={22} />, angle: 340 },
+    { label: "Blog", to: "/blog", icon: <FaBlog size={22} />, angle: 340 },
   ];
 
   return (
-    <div>
-      {/* ✅ Desktop Navbar */}
+    <header className="z-50 top-0">
+      {/*  Desktop Navbar (Top) */}
       <div className="hidden lg:block shadow-xl mt-4">
         <div className="navbar bg-base-100 w-10/12 mx-auto rounded-full px-6">
           <div className="navbar-start">
@@ -53,115 +57,117 @@ const Header = () => {
         </div>
       </div>
 
-      {/* ✅ Mobile Bottom Navbar */}
+      {/*  Mobile Bottom Navbar */}
       <AnimatePresence>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 80, damping: 15 }}
-          className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md z-50 md:hidden"
+          className="fixed z-50 bottom-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-lg rounded-full flex justify-between items-center px-10 py-4 md:hidden"
         >
-          <div className="relative bg-white/90 backdrop-blur-md shadow-lg rounded-t-2xl flex justify-between items-center px-10 py-4">
-            {/* Home */}
-            <Link
-              to="/"
-              className={`text-gray-600 hover:text-green-500 transition ${
-                location.pathname === "/" && "text-green-500"
-              }`}
-            >
-              <FiHome size={24} />
-            </Link>
+          {/* Home */}
+          <Link
+            to="/"
+            className={`text-gray-600 hover:text-sky-500 transition ${
+              location.pathname === "/" && "text-sky-500"
+            }`}
+          >
+            <FiHome size={24} />
+          </Link>
 
-            {/* Floating Add Button */}
-            <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                whileHover={{ scale: 1.1 }}
-                onClick={() => setIsOpen(!isOpen)}
-                className="bg-green-500 text-white rounded-full p-4 shadow-lg border border-green-300 relative z-50"
+          {/* Floating Add Button */}
+          <div className="absolute -top-7 left-1/2 -translate-x-1/2">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 }}
+              onClick={() => setIsOpen(!isOpen)}
+              className="bg-sky-500 text-white rounded-full p-4 shadow-lg border border-sky-300 relative z-50"
+            >
+              <motion.div
+                animate={{ rotate: isOpen ? 45 : 0 }}
+                transition={{ type: "spring", stiffness: 200, damping: 15 }}
               >
-                <motion.div
-                  animate={{ rotate: isOpen ? 45 : 0 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                >
-                  <FiPlus size={28} />
-                </motion.div>
-              </motion.button>
-            </div>
-
-            {/* Profile */}
-            <Link
-              to="/profile"
-              className={`text-gray-600 hover:text-green-500 transition ${
-                location.pathname === "/profile" && "text-green-500"
-              }`}
-            >
-              <FiUser size={24} />
-            </Link>
+                <FiPlus size={28} />
+              </motion.div>
+            </motion.button>
           </div>
+
+          {/* Profile */}
+          <a
+            href="https://wa.me/message/IVW4EW6JQQZ2M1"
+            _target="blank"
+            rel="noreferrer"
+            className={`text-gray-600 hover:text-sky-500 transition ${
+              location.pathname === "https://wa.me/message/IVW4EW6JQQZ2M1" && "text-sky-500"
+            }`}
+          >
+            <PiWhatsappLogoBold className="text-green-600" size={24} />
+          </a>
         </motion.div>
       </AnimatePresence>
 
-      {/* ✅ Overlay + Animated Radial Buttons */}
+      {/*  Overlay + Animated Radial Buttons */}
       <AnimatePresence>
-        {isOpen && (
-          <>
-            {/* Dark overlay */}
-            <motion.div
-              className="fixed inset-0 bg-black bg-opacity-40 z-30"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-            />
+  {isOpen && (
+    <>
+      {/* Overlay */}
+      <motion.div
+        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setIsOpen(false)}
+      />
 
-            {/* Expanding radial menu above center button */}
-            <div className="fixed bottom-[90px] left-1/2 -translate-x-1/2 z-40">
-              {buttons.map((btn, i) => {
-                const distance = 100; // how far buttons spread from center
-                const x = distance * Math.cos((btn.angle * Math.PI) / 180);
-                const y = distance * Math.sin((btn.angle * Math.PI) / 180);
+      {/* Floating radial menu */}
+      <div className="fixed bottom-[90px] left-1/2 -translate-x-1/2 z-40">
+        {buttons.map((btn, i) => {
+          const distance = 110;
+          const x = distance * Math.cos((btn.angle * Math.PI) / 180);
+          const y = distance * Math.sin((btn.angle * Math.PI) / 180);
+          const isActive = location.pathname === btn.to;
 
-                const isActive = location.pathname === btn.to;
+          return (
+            <motion.button
+              key={i}
+              initial={{ x: 0, y: 0, opacity: 0, scale: 0.5 }}
+              animate={{ x, y, opacity: 1, scale: 1 }}
+              exit={{ x: 0, y: 0, opacity: 0, scale: 0.5 }}
+              transition={{
+                delay: i * 0.05,
+                type: "spring",
+                stiffness: 200,
+                damping: 18,
+              }}
+              className="absolute"
+            >
+              <Link
+                to={btn.to}
+                onClick={() => setIsOpen(false)}
+                className={`flex items-center justify-center w-14 h-14 tooltip tooltip-info rounded-full shadow-xl border border-white/20 transition-all duration-300 ${
+                  isActive
+                    ? "bg-sky-500 text-white"
+                    : "bg-white text-sky-600 hover:bg-green-100"
+                }`}
+                data-tip={btn.label}
+              >
+                <span className="text-2xl">{btn.icon}</span>
+              </Link>
+            </motion.button>
+          );
+        })}
+      </div>
+    </>
+  )}
+</AnimatePresence>
 
-                return (
-                  <motion.button
-                    key={i}
-                    initial={{ x: 0, y: 0, opacity: 0, scale: 0.5 }}
-                    animate={{ x, y, opacity: 1, scale: 1 }}
-                    exit={{ x: 0, y: 0, opacity: 0, scale: 0.5 }}
-                    transition={{
-                      delay: i * 0.05,
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 20,
-                    }}
-                    className="absolute"
-                  >
-                    <Link
-                      to={btn.to}
-                      className={`p-4 rounded-full shadow-lg transition ${
-                        isActive
-                          ? "bg-green-500 text-white"
-                          : "bg-white text-green-500 hover:bg-green-100"
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {btn.icon}
-                    </Link>
-                  </motion.button>
-                );
-              })}
-            </div>
-          </>
-        )}
-      </AnimatePresence>
-    </div>
+    </header>
   );
 };
 
 export default Header;
+
 
 
 

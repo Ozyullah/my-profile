@@ -13,10 +13,10 @@ import image from "../../assets/images/habibullahwobg.png";
 import "./Slider.css";
 
 const socialIcons = [
-  { icon: <TiSocialLinkedinCircular className="text-blue-600 text-3xl" />, link: "#" },
-  { icon: <MdOutlineFacebook className="text-sky-500 text-3xl" />, link: "#" },
+  { icon: <TiSocialLinkedinCircular className="text-blue-600 text-3xl" />, link: "https://www.linkedin.com/in/md-habibullah-916aa5278/" },
+  { icon: <MdOutlineFacebook className="text-sky-500 text-3xl" />, link: "https://www.facebook.com/md.habibullah.ozy" },
   { icon: <IoLogoWhatsapp className="text-green-500 text-3xl" />, link: "#" },
-  { icon: <ImTwitter className="text-sky-400 text-2xl" />, link: "#" },
+  { icon: <ImTwitter className="text-sky-400 text-2xl" />, link: "https://x.com/Habibullah752?t=bajQeCLuLzfbkEDEUXIM7g&s=09" },
   { icon: <IoIosMailOpen className="text-red-500 text-3xl" />, link: "#" },
 ];
 
@@ -30,14 +30,14 @@ const Slider = () => {
         {/* Sidebar Icons */}
         <div className="flex flex-col gap-6 mr-10">
           {[
-            { icon: <FaFacebookF />, color: "hover:text-blue-500" },
-            { icon: <FaInstagram />, color: "hover:text-pink-500" },
-            { icon: <FaLinkedinIn />, color: "hover:text-sky-500" },
-            { icon: <FaTwitter />, color: "hover:text-cyan-400" },
+            { icon: <FaFacebookF />, color: "hover:text-blue-500", link: "https://www.facebook.com/md.habibullah.ozy" },
+            { icon: <FaInstagram />, color: "hover:text-pink-500", link: "#"},
+            { icon: <FaLinkedinIn />, color: "hover:text-sky-500", link: "https://www.linkedin.com/in/md-habibullah-916aa5278/" },
+            { icon: <FaTwitter />, color: "hover:text-cyan-400", link: "https://x.com/Habibullah752?t=bajQeCLuLzfbkEDEUXIM7g&s=09" },
           ].map((item, i) => (
             <motion.a
               key={i}
-              href="#"
+              href={item.link}
               whileHover={{ scale: 1.2, x: 4 }}
               className={`text-gray-300 text-2xl z-10 transition-all duration-300 ${item.color}`}
             >
@@ -74,8 +74,8 @@ const Slider = () => {
       >
         <div className="mb-4 text-black">
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-           Hi, I'm Md Habibullah
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+           Hi👋,I'm Md Habibullah
           </h2>
         </div>
         <TypeAnimation

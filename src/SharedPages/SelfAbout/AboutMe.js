@@ -71,7 +71,7 @@ const AboutMe = () => {
   return (
     <section id='aboutme' className="relative w-10/12 mx-auto bg-gradient-to-r from-white via-gray-50 to-white shadow-xl py-12 px-6">
       <h2 className="text-center text-4xl font-bold font-serif mb-10 text-gray-800 relative">
-        About Me
+        🧑‍💻 About Me
         <span className="absolute left-1/2 -bottom-2 w-20 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
       </h2>
       <p className='text-start md:text-center lg:text-center text-gray-600 mb-10 px-2 md:px-20 lg:px-40 w-full lg:w-[50%] mx-auto'>

@@ -11,32 +11,28 @@ const services = [
   {
     title: "Web Design",
     img: design,
-    desc: "Professional and innovative designs that transform ideas into visually engaging websites tailored to your brand.",
+    desc: "Creative and functional designs that align aesthetics with usability — ensuring a seamless user experience.",
   },
   {
     title: "Web Application",
     img: developmentIcon,
-    desc: "Building scalable, secure, and high-performing web apps that boost business efficiency and engagement.",
+    desc: "Modern, scalable, and high-performance web apps tailored to your business logic and growth goals.",
   },
   {
     title: "Responsive Design",
     img: res,
-    desc: "Crafting mobile-first, fully responsive websites that deliver seamless experiences on all devices.",
+    desc: "Ensuring your website looks flawless and performs perfectly on any device or screen size.",
   },
   {
     title: "Maintenance & Support",
     img: maintainence,
-    desc: "Providing reliable website updates, fixes, and performance monitoring for smooth operations.",
+    desc: "Ongoing website care, updates, and optimizations to keep your digital presence running smoothly.",
   },
 ];
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.25 },
-  },
+  show: { opacity: 1, transition: { staggerChildren: 0.25 } },
 };
 
 const cardVariants = {
@@ -44,31 +40,35 @@ const cardVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 60, damping: 12 },
+    transition: { type: "spring", stiffness: 60, damping: 10 },
   },
 };
 
 const Services = () => {
   return (
-    <section className="py-16 w-10/12 mx-auto lg:px-20 bg-white relative">
+    <section className="relative w-10/12 mx-auto py-20 px-6 lg:px-20 bg-gradient-to-b from-white via-gray-50 to-sky-50 overflow-hidden">
+      {/* Background gradient blob for extra depth */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-sky-200 opacity-30 blur-3xl rounded-full -z-10"></div>
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-orange-200 opacity-30 blur-3xl rounded-full -z-10"></div>
+
       {/* Section Heading */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-16 relative"
       >
-        <h2 className="text-4xl font-bold text-gray-800">
-          My <span className="text-sky-500">Services</span>
-          <span className="absolute left-1/2 -bottom-2 w-20 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
+        <h2 className="text-4xl font-bold text-gray-800 inline-block relative">
+          💼 My <span className="text-sky-500">Services</span>
+          <span className="absolute left-1/2 -bottom-3 w-24 h-1 rounded-full bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
         </h2>
-        <p className="text-gray-500 mt-2 text-lg">
-          Solutions designed to grow your business online
+        <p className="text-gray-500 mt-4 text-lg">
+          Premium solutions built to elevate your online presence
         </p>
       </motion.div>
 
-      {/* Services Grid */}
+      {/* Service Cards */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -80,40 +80,44 @@ const Services = () => {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="group bg-white rounded-2xl shadow-lg p-6 
-                       transition-all duration-300 transform
-                       hover:-translate-y-3 hover:shadow-2xl 
-                       hover:rotate-x-3 hover:rotate-y-3"
-            style={{
-              perspective: "1000px",
-            }}
+            className="relative group bg-white rounded-2xl shadow-lg p-8 transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl overflow-hidden"
           >
-            <div className="flex justify-center">
-              <img
+            {/* Glowing border animation */}
+            <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-sky-400 transition-all duration-500"></div>
+
+            {/* Floating icon */}
+            <div className="flex justify-center mb-6">
+              <motion.img
                 src={service.img}
                 alt={service.title}
-                className="w-20 mb-6 group-hover:scale-110 transition-transform duration-300"
+                className="w-20 h-20 object-contain"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ repeat: Infinity, duration: 3 }}
               />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-3 text-center">
+
+            <h3 className="text-xl font-semibold text-gray-800 text-center mb-3 group-hover:text-sky-600 transition-colors duration-300">
               {service.title}
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed text-center">
               {service.desc}
             </p>
+
+            {/* Gradient overlay hover effect */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-t from-sky-100/50 via-transparent to-transparent transition-opacity duration-500 rounded-2xl"></div>
           </motion.div>
         ))}
       </motion.div>
 
       {/* Marquee */}
-      <div className="mt-12">
+      <div className="mt-16">
         <Marquee
-          className="text-sky-600 font-medium text-lg tracking-wide"
+          className="text-sky-600 font-semibold text-lg tracking-wide"
           gradient={false}
           speed={60}
         >
-          I will always give my best service • Web Design • Development •
-          Responsive Design • Maintenance •
+          I deliver modern, responsive, and high-performing digital experiences •
+          Web Design • Web Application • Responsive Design • Maintenance •
         </Marquee>
       </div>
     </section>
@@ -121,6 +125,7 @@ const Services = () => {
 };
 
 export default Services;
+
 
 
 

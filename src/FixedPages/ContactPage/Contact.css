@@ -143,3 +143,34 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.wave-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15), transparent 70%),
+              radial-gradient(circle at 70% 80%, rgba(251, 146, 60, 0.15), transparent 70%);
+  animation: moveWaves 15s infinite linear;
+  transform: translate(-25%, -25%);
+  z-index: 0;
+}
+
+.wave-bg.delay-2000 {
+  animation-delay: 2s;
+}
+
+@keyframes moveWaves {
+  0% {
+    transform: translate(-25%, -25%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-20%, -30%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-25%, -25%) rotate(360deg);
+  }
+}

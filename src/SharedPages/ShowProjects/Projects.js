@@ -33,7 +33,7 @@ const projectsData = [
   {
     title: "Real-time Ecommerce platform",
     description: "Falrex is a E-commers website. it's for b2b, b2c drop shiping adjusted feature. drop seller can be share product any platform then viw from dashboard overall sells and He/she point. Virtual trial system. AI based product search system. User can create shop and sell products. User can be Report any product with proper details. Dashboard for user and admin. Dashboard for user only show orders and payment system. Admin can manage all orders, products, users and analysis Report product then Notify seller. Super admin can make other users admin. Admin can add product categories and seller verify system.",
-    tech: "Nextjs,TailwindCss, MongoDB, Nodejs, Framer Motion. AI (Computer Vision).",
+    tech: "Nextjs,TailwindCss, MongoDB, Nodejs, Framer Motion, AI (Computer Vision).",
     owner: "Falrex Ltd",
     date: "05/02/2026 (aprox)",
     specification: "E-commerce Website, Drop shipping, Admin Panel, User Authentication, Product Management, Order Management, Responsive Design, AI Integration",
@@ -114,7 +114,7 @@ const Projects = () => {
   return (
     <div className="mt-11 mb-5 w-10/12 mx-auto" id="projects">
       <h2 className="text-4xl text-center font-serif mb-10 relative">
-        My Projects
+       🚀 My Projects
         <span className="absolute left-1/2 -bottom-2 w-20 z-10 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
       </h2>
 
