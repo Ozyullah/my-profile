@@ -12,6 +12,9 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
 
+  
+        // console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -19,8 +22,8 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_9dub4ra",
-        "template_ms5my54",
+        "service_detpqdf",
+        "template_zlru88d",
         form.current,
         "wSgiyP5XFSIy25aZh"
       )
@@ -36,6 +39,7 @@ const Contact = () => {
         }
       );
   };
+  
 
   return (
     <section className="relative w-10/12 py-20 px-6 md:px-12 overflow-hidden mx-auto rounded-3xl shadow-2xl bg-gradient-to-br from-sky-50 via-white to-sky-100 dark:from-[#0a0f1c] dark:via-[#0a1528] dark:to-[#081018] transition-colors duration-700">
@@ -66,11 +70,11 @@ const Contact = () => {
         >
           <div className="flex items-center gap-3 bg-white/60 dark:bg-white/10 backdrop-blur-lg px-5 py-3 rounded-2xl shadow-md">
             <IoIosMailOpen className="text-sky-500 text-2xl" />
-            <span className="font-medium">md.habibullah7520@gmail.com</span>
+            <span className="font-medium">olyalubayed@gmail.com</span>
           </div>
           <div className="flex items-center gap-3 bg-white/60 dark:bg-white/10 backdrop-blur-lg px-5 py-3 rounded-2xl shadow-md">
             <FaPhoneAlt className="text-sky-500 text-xl" />
-            <span className="font-medium">+8801609-111813</span>
+            <span className="font-medium">+8801642649077</span>
           </div>
         </motion.div>
 

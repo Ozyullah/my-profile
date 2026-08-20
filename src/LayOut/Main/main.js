@@ -5,7 +5,7 @@ import Headroom from "react-headroom";
 
 const MainLayout = () => {
   return (
-    <div className="relative min-h-screen pb-20">
+    <div className="relative min-h-screen">
       {/* Headroom only for desktop navbar */}
       <div className="hidden lg:block">
         <Headroom>

@@ -1,143 +1,161 @@
 import React from 'react';
-import './Resume.css';
-import { ImLocation2 } from 'react-icons/im';
-import { CgPhone } from 'react-icons/cg';
-import { ImMail4 } from 'react-icons/im';
-import { TbWorld } from 'react-icons/tb';
-import { FcDownload } from 'react-icons/fc';
-import profileImg from '../../assets/images/owazy.jpg';
-import topEffect from '../../assets/images/top-effect.png';
-import patternImg from '../../assets/images/beautiful-pattern.png';
-import resumePDF from '../../assets/images/habibullahResume.pdf';
+import { Mail, Phone, MapPin, Globe, ExternalLink, Award, Book, Briefcase, Languages } from 'lucide-react';
+import img from "../../assets/images/OLYULLAH.png"
 
 const Resume = () => {
   return (
-    <div className='resume-container p-10 px-14'>
-      {/* Download button */}
-      <div className='flex justify-end mb-6'>
-        <a href={resumePDF} download="Md_Habibullah_Resume.pdf" className='download-btn flex items-center gap-2'>
-          <FcDownload size={24} /> Download Resume
-        </a>
-      </div>
+    <div className="max-w-5xl mx-auto my-10 bg-white shadow-2xl flex flex-col md:flex-row border-t-8 border-slate-800">
+      
+      {/* Sidebar - Profile & Contact */}
+      <aside className="w-full md:w-1/3 bg-slate-50 p-8 border-r border-gray-200">
+        <div className="flex flex-col items-center text-center mb-8">
+          {/* Image Placeholder */}
+          <div className="w-48 h-48 rounded-full border-4 border-white shadow-lg overflow-hidden bg-gray-200 mb-4">
+            <img 
+              src={img}
+              alt="MD. OLYULLAH" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">MD. OLYULLAH</h1>
+          <p className="text-slate-600 font-medium">Head of Admin & HR</p>
+        </div>
 
-      <div className='flex flex-col md:flex-row gap-8'>
-        {/* Left Panel */}
-        <div className='left-panel bg-sky-100 w-full md:w-1/3 pb-5 rounded-lg p-4'>
-          <div className='flex justify-center pt-6'>
-            <img src={profileImg} alt="Profile" className='border-design border-4 border-sky-200 w-48' />
+        <div className="space-y-4">
+          <SectionTitle title="Contact" icon={<Phone size={18}/>} />
+          <div className="text-sm space-y-3 text-slate-700">
+            <p className="flex items-center gap-3"><Phone size={14} className="text-slate-500"/> +8801642649077</p>
+            <p className="flex items-center gap-3"><Mail size={14} className="text-slate-500"/> olyalubayed@gmail.com</p>
+            <p className="flex items-center gap-3"><MapPin size={14} className="text-slate-500"/> Jalalabad, West Khulshi ▪ Chattogram, Bangladesh</p>
           </div>
 
-          {/* About */}
-          <section className='mt-6'>
-            <h2 className='section-title'>About Me</h2>
-            <p>
-              Motivated and detail-oriented Junior Web Developer pursuing B.Sc in Computer Science & Engineering
-              at Daffodil International University. Specialized in Full-Stack Web Development and committed to
-              completing projects efficiently.
-            </p>
-          </section>
+          <SectionTitle title="Education" icon={<Book size={18}/>} />
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold text-slate-800 text-sm">MA in Da'wah and Islamic Studies</p>
+              <p className="text-xs text-slate-600">International Islamic University Chittagong (IIUC)</p>
+              <p className="text-xs text-slate-600">2023</p>
+              <p className="text-xs font-semibold text-slate-500">CGPA: 3.37 / 4.00</p>
+            </div>
+            <div>
+              <p className="font-bold text-slate-800 text-sm">BA (Hons.) in Da’wah and Islamic Studies</p>
+              <p className="text-xs text-slate-600">International Islamic University Chittagong (IIUC)</p>
+              <p className="text-xs text-slate-600">2018 – 2022</p>
+              <p className="text-xs font-semibold text-slate-500">CGPA: 3.57 / 4.00</p>
+            </div>
+            <div>
+              <p className="font-bold text-slate-800 text-sm">Higher Secondary Certificate (Science)</p>
+              <p className="text-xs text-slate-600">Jhalokathi N S Kamil Madrasah</p>
+              <p className="text-xs text-slate-600">2015 – 2016</p>
+              <p className="text-xs font-semibold text-slate-500">GPA: 5.00 / 5.00</p>
+            </div>
+          </div>
 
-          {/* Contact */}
-          <section className='mt-6'>
-            <h2 className='section-title'>Contact</h2>
-            <ul className='contact-list'>
-              <li><CgPhone /> +88016-09111813</li>
-              <li><ImMail4 /> md.habibullah7520@gmail.com</li>
-              <li><TbWorld /> <a href="http://localhost:3000" target="_blank" rel="noreferrer">Portfolio</a></li>
-              <li><ImLocation2 /> Mirpur, Dhaka, Bangladesh</li>
-            </ul>
-          </section>
-
-          {/* Skills */}
-          <section className='mt-6'>
-            <h2 className='section-title'>Skills</h2>
-            <ul className='skill-list'>
-              <li>Frontend: HTML5, CSS3, JS (ES6+), React.js, Next.js, JWT, TanstackQuery</li>
-              <li>Backend: Node.js, Express.js, MySQL</li>
-              <li>Database: MongoDB, Firebase</li>
-              <li>Tools & Others: Git, VS Code, REST APIs, Figma</li>
-              <li>Soft Skills: Teamwork, Adaptability, Communication</li>
-            </ul>
-          </section>
+          <SectionTitle title="Languages" icon={<Languages size={18}/>} />
+          <div className="flex flex-wrap gap-2">
+            {['Bangla (Native)', 'English', 'Arabic', 'Urdu', 'Hindi'].map(lang => (
+              <span key={lang} className="px-2 py-1 bg-white border border-slate-200 rounded text-xs font-medium text-slate-700">
+                {lang}
+              </span>
+            ))}
+          </div>
         </div>
+      </aside>
 
-        {/* Right Panel */}
-        <div className='right-panel w-full md:w-2/3 pb-5 relative'>
-          <img src={topEffect} alt="" className='absolute top-0 right-0 w-64 opacity-30' />
+      {/* Main Content */}
+      <main className="w-full md:w-2/3 p-10">
+        <section>
+          <SectionTitle title="Professional Experience" icon={<Briefcase size={20}/>} main />
+          
+          <ExperienceItem 
+            title="Head of Admin & HR"
+            company="Zaitoon Academy"
+            date="May 2023 – Present"
+            link="https://www.zaitoonacademy.com/"
+            bullets={[
+              "Oversee daily administrative and HR operations supporting staff and students.",
+              "Lead media production including photography and videography.",
+              "Manage digital marketing campaigns and online presence.",
+              "Coordinate IT support and maintain academy data platforms."
+            ]}
+          />
 
-          {/* Header */}
-          <header className='mb-6'>
-            <h1 className='text-4xl font-bold text-cyan-800'>Md. Habibullah</h1>
-            <h3 className='text-xl text-cyan-900'>Junior Full-Stack Developer</h3>
-          </header>
+          <ExperienceItem 
+            title="Volunteer Video Editor & Reviewer"
+            company="Haramain.info, KSA"
+            date="Oct 2020 – May 2023"
+            link="http://www.haramain.info/"
+            bullets={[
+              "Edited and reviewed videos from the Haramain (Kaaba and Masjid An-Nabawi).",
+              "Translated daily Salat videos and Quranic recitations for global audiences.",
+              "Ensured accuracy and faithfulness to original religious texts."
+            ]}
+          />
 
-          {/* Education */}
-          <section className='mb-6'>
-            <h2 className='section-title'>Education</h2>
-            <ul>
-              <li>
-                <strong>Daffodil International University, Dhaka</strong> (2021 – Present)<br />
-                B.Sc in Computer Science and Engineering
-              </li>
-              <li className='mt-2'>
-                <strong>Jhalokathi NS Kamil Madrasah</strong> (2018 – 2020)<br />
-                HSC, GPA 4.95
-              </li>
-            </ul>
-          </section>
+          <ExperienceItem 
+            title="HR & IT Officer"
+            company="Safeer Academy"
+            date="April 2021 – Feb 2023"
+            link="https://www.safeeracademy.org/"
+            bullets={[
+              "Managed full-cycle media production for academy events.",
+              "Provided multi-departmental IT support and consultancy.",
+              "Integrated ID card systems with attendance software."
+            ]}
+          />
+        </section>
 
-          {/* Experience */}
-          <section className='mb-6'>
-            <h2 className='section-title'>Experience</h2>
-            <ul>
-              <li>
-                <strong>Data Visionary Contest (2025)</strong> – Built “Data Pulse 2.0” using Next.js, AntDesign, TypeScript, JWT
-              </li>
-              <li>
-                <strong>Crack Dataset Contest (2024)</strong> – Developed “Data Pulse 1.0”
-              </li>
-              <li>
-                <strong>Web Developer (MERN)</strong> – Created publication and e-commerce platforms using React.js, Node.js, Express, MongoDB
-              </li>
-            </ul>
-          </section>
+        <section className="mt-8">
+          <SectionTitle title="Key Training" icon={<Award size={20}/>} main />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 bg-slate-50 rounded-lg">
+              <h4 className="font-bold text-slate-800 text-sm italic underline">CareerX - BYLC</h4>
+              <p className="text-xs text-slate-600 mt-1">Professional development covering communication, operations, and management.</p>
+            </div>
+            <div className="p-4 bg-slate-50 rounded-lg">
+              <h4 className="font-bold text-slate-800 text-sm italic underline">Digital Marketing - LEDP</h4>
+              <p className="text-xs text-slate-600 mt-1">150 hours of intensive training in social media marketing and KPI measurement.</p>
+            </div>
+          </div>
+        </section>
 
-          {/* Projects */}
-          <section className='mb-6'>
-            <h2 className='section-title'>Projects</h2>
-            <ul>
-              <li>
-                <strong>Zaitoon Publication</strong> – Publication & book selling platform (React.js, Node.js, MongoDB)<br />
-                🔗 <a href="https://zaitoonpublication.com" target="_blank" rel="noreferrer">zaitoonpublication.com</a>
-              </li>
-              <li className='mt-2'>
-                <strong>Falrex</strong> – E-commerce B2B & B2C platform (Next.js, AntDesign, MongoDB)<br />
-                🔗 <a href="https://falrex.com" target="_blank" rel="noreferrer">falrex.com</a>
-              </li>
-            </ul>
-          </section>
-
-          {/* Certificates & Personal */}
-          <section className='mb-6'>
-            <h2 className='section-title'>Certificates & Personal Details</h2>
-            <p>Organizer – Intra University Crack Dataset Contest (2024)</p>
-            <p>Date of Birth: 07/05/2000 | Marital Status: Single | Nationality: Bangladeshi | Religion: Islam | Blood Group: B+</p>
-            <p>Permanent Address: Betagi, Barguna, Barishal</p>
-            <p>Hobbies: Reading books, Learning new skills, Exploring new places</p>
-          </section>
-
-          {/* Reference */}
-          <section className='mb-6'>
-            <h2 className='section-title'>Reference</h2>
-            <p>Md. Sadekur Rahman – Assistant Professor, CSE Department, Daffodil International University</p>
-            <p>📧 sadekur.cse@daffodilvarsity.edu.bd | 📞 +88-01676379698</p>
-          </section>
-
-          <img src={patternImg} alt="" className='w-32 absolute bottom-0 right-0 opacity-20' />
-        </div>
-      </div>
+        <section className="mt-8">
+          <SectionTitle title="Technical Skills" icon={<Globe size={20}/>} main />
+          <div className="flex flex-wrap gap-3">
+            {['Adobe Premiere Pro', 'Photoshop', 'Illustrator', 'MS Office', 'Google Workspace', 'CCTV Operations', 'Content Strategy'].map(skill => (
+              <span key={skill} className="px-3 py-1 bg-slate-800 text-white rounded-full text-xs">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
+
+const SectionTitle = ({ title, icon, main }) => (
+  <div className={`flex items-center gap-2 mb-4 ${main ? 'border-b-2 border-slate-100 pb-2' : ''}`}>
+    <span className="text-slate-800">{icon}</span>
+    <h2 className={`uppercase tracking-widest font-bold ${main ? 'text-lg' : 'text-sm'} text-slate-800`}>{title}</h2>
+  </div>
+);
+
+const ExperienceItem = ({ title, company, date, bullets, link }) => (
+  <div className="mb-6">
+    <div className="flex justify-between items-start flex-wrap">
+      <div>
+        <h3 className="text-md font-bold text-slate-900">{title}</h3>
+        <a href={link} className="text-sm text-blue-600 hover:underline flex items-center gap-1">
+          {company} <ExternalLink size={12}/>
+        </a>
+      </div>
+      <span className="text-xs font-semibold bg-slate-100 px-2 py-1 rounded text-slate-500">{date}</span>
+    </div>
+    <ul className="mt-2 list-disc list-inside text-sm text-slate-600 space-y-1">
+      {bullets.map((bullet, idx) => <li key={idx}>{bullet}</li>)}
+    </ul>
+  </div>
+);
 
 export default Resume;

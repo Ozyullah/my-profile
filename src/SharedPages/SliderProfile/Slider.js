@@ -9,35 +9,56 @@ import { ImTwitter } from "react-icons/im";
 import { IoIosMailOpen } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import image from "../../assets/images/habibullahwobg.png";
+import image from "../../assets/images/OLYULLAH.png";
 import "./Slider.css";
 
 const socialIcons = [
-  { icon: <TiSocialLinkedinCircular className="text-blue-600 text-3xl" />, link: "https://www.linkedin.com/in/md-habibullah-916aa5278/" },
-  { icon: <MdOutlineFacebook className="text-sky-500 text-3xl" />, link: "https://www.facebook.com/md.habibullah.ozy" },
-  { icon: <IoLogoWhatsapp className="text-green-500 text-3xl" />, link: "#" },
-  { icon: <ImTwitter className="text-sky-400 text-2xl" />, link: "https://x.com/Habibullah752?t=bajQeCLuLzfbkEDEUXIM7g&s=09" },
+  { icon: <TiSocialLinkedinCircular className="text-blue-600 text-3xl" />, link: "https://www.linkedin.com/in/md-olyullah-7b1b20160?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+  { icon: <MdOutlineFacebook className="text-sky-500 text-3xl" />, link: "https://www.facebook.com/share/18SXYznGMN/" },
+  { icon: <IoLogoWhatsapp className="text-green-500 text-3xl" />, link: "https://wa.me/message/7R25KORMHHIDD1" },
+  // { icon: <ImTwitter className="text-sky-400 text-2xl" />, link: "#" },
   { icon: <IoIosMailOpen className="text-red-500 text-3xl" />, link: "#" },
 ];
 
 const Slider = () => {
   return (
     <section className="relative text-white flex flex-col lg:flex-row items-center justify-center overflow-hidden px-6">
-     
 
       {/* ==== Left Side: Image + Vertical Social Icons ==== */}
-      <div className="relative z-10 flex items-center justify-center mb-10 lg:mb-0">
+      <div className="grid">
+<div className="mb-6 text-center lg:text-left pt-5">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+    <span className="bg-gradient-to-r from-sky-400 to-orange-400 bg-clip-text text-transparent">
+      <TypeAnimation
+        sequence={[
+          "Welcome to my Portfolio",
+          2000,
+          "Explore My Creative World",
+          2000,
+        ]}
+        speed={50}
+        repeat={Infinity}
+      />
+    </span>
+  </h1>
+</div>
+
+
+        <div className="relative z-10 flex items-center justify-center mb-10 lg:mb-0">
+        
+
         {/* Sidebar Icons */}
         <div className="flex flex-col gap-6 mr-10">
           {[
-            { icon: <FaFacebookF />, color: "hover:text-blue-500", link: "https://www.facebook.com/md.habibullah.ozy" },
+            { icon: <FaFacebookF />, color: "hover:text-blue-500", link: "https://www.facebook.com/share/18SXYznGMN/" },
             { icon: <FaInstagram />, color: "hover:text-pink-500", link: "#"},
-            { icon: <FaLinkedinIn />, color: "hover:text-sky-500", link: "https://www.linkedin.com/in/md-habibullah-916aa5278/" },
-            { icon: <FaTwitter />, color: "hover:text-cyan-400", link: "https://x.com/Habibullah752?t=bajQeCLuLzfbkEDEUXIM7g&s=09" },
+            { icon: <FaLinkedinIn />, color: "hover:text-sky-500", link: "https://www.linkedin.com/in/md-olyullah-7b1b20160?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+            { icon: <FaTwitter />, color: "hover:text-cyan-400", link: "#" },
           ].map((item, i) => (
             <motion.a
               key={i}
               href={item.link}
+              target="_blank"
               whileHover={{ scale: 1.2, x: 4 }}
               className={`text-gray-300 text-2xl z-10 transition-all duration-300 ${item.color}`}
             >
@@ -64,27 +85,28 @@ const Slider = () => {
           />
         </motion.div>
       </div>
+      </div>
+      
 
       {/* ==== Right Side: Developer Info ==== */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 max-w-lg text-center lg:text-left"
+        className="relative z-10 max-w-lg text-center lg:text-left ml-10"
       >
         <div className="mb-4 text-black">
 
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold  pb-8" style={{fontFamily:"Traditional Arabic"}}>
+           السلام عليكم ورحمة الله وبركاته
+          </h2>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-           Hi👋,I'm Md Habibullah
+           Hi👋, I'm <span>OLYULLAH</span>
           </h2>
         </div>
         <TypeAnimation
           sequence={[
-            "I'm a Front-End Web Developer",
-            1500,
-            "I'm a Full-Stack Web Developer (MERN)",
-            1500,
-            "I'm a React Developer",
+            "I'm a Freelance Videographer",
             1500,
           ]}
           speed={40}
@@ -92,9 +114,9 @@ const Slider = () => {
           className="text-sky-400 font-semibold text-lg sm:text-xl mb-4"
         />
 
-        <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+        {/* <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
           I build clean, responsive, functional websites that help businesses grow.
-        </p>
+        </p> */}
 
         {/* --- Social Icons --- */}
         <div className="flex justify-center lg:justify-start gap-4 mb-6">
@@ -113,7 +135,7 @@ const Slider = () => {
 
         <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
           {/* --- Contact Button --- */}
-        <Link to="/projects" className="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-sky-400 to-orange-400 text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transition duration-300"
+        <Link to="/projects" className="flex items-center font-semibold gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-sky-400 to-orange-400 text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transition duration-300"
                     >
                       View my Work 
                       <motion.span
@@ -124,9 +146,9 @@ const Slider = () => {
                         <BsFillArrowRightCircleFill className="text-2xl" />
                       </motion.span>
         </Link>
-        <Link to="/contact">
-          <button className="flex items-center justify-center gap-2 bg-transparent border-2 border-sky-500 text-sky-400 px-6 py-3 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300">
-            Contact Me <BsFillArrowRightCircleFill className="text-2xl" />
+        <Link to="/resume">
+          <button className="flex items-center font-semibold justify-center gap-2 bg-transparent border-2 border-sky-500 text-sky-400 px-6 py-3 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300">
+            View my Resume <BsFillArrowRightCircleFill className="text-2xl" />
           </button>
         </Link>
         </div>

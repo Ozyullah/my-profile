@@ -63,7 +63,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import selfImage from '../../assets/images/habib.jpg';
-import image from '../../assets/images/habibullah.jpg';
+import image from '../../assets/images/oly.jpg';
 import { RxResume } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 
@@ -71,14 +71,13 @@ const AboutMe = () => {
   return (
     <section id='aboutme' className="relative w-10/12 mx-auto bg-gradient-to-r from-white via-gray-50 to-white shadow-xl py-12 px-6">
       <h2 className="text-center text-4xl font-bold font-serif mb-10 text-gray-800 relative">
-        🧑‍💻 About Me
+        About Me
         <span className="absolute left-1/2 -bottom-2 w-20 h-1 bg-gradient-to-r from-sky-400 to-orange-400 transform -translate-x-1/2"></span>
       </h2>
-      <p className='text-start md:text-center lg:text-center text-gray-600 mb-10 px-2 md:px-20 lg:px-40 w-full lg:w-[50%] mx-auto'>
-        Motivated and detail-oriented Junior Web Developer with a strong
-          foundation in front-end and back-end technologies. Passionate
-          about building responsive, user-friendly web applications and
-          eager to contribute to a dynamic development team.</p>
+      <p className='text-start md:text-center lg:text-center text-gray-600 mb-10 px-2 md:px-20 lg:px-40 w-full lg:w-[65%] mx-auto'>
+        I’m a freelance videographer with a strong foundation in leadership and operations as a full-time Head of Administration and HR. My professional background has shaped my attention to detail, communication skills, and structured approach — all of which I bring into my creative work.
+
+I specialize in capturing authentic moments and delivering purposeful, high-quality visual content. By combining creativity with professionalism, I ensure every project is executed with clarity, precision, and impact.</p>
 
       <div className="grid lg:grid-cols-2 gap-10 items-center">
         {/* Profile Image with Effects */}
@@ -107,16 +106,16 @@ const AboutMe = () => {
         >
           <div className="grid sm:grid-cols-2 gap-6 text-gray-700 font-serif">
             <div>
-              <p><span className="font-semibold text-sky-500">Name:</span> Md.Habibullah</p>
-              <p><span className="font-semibold text-sky-500">Birth Date:</span> 07th May 2000</p>
-              <p><span className="font-semibold text-sky-500">Address:</span> Mirpur, Bangladesh</p>
-              <p><span className="font-semibold text-sky-500">Language:</span> Bangla, English</p>
+              <p><span className="font-semibold text-sky-500">Name:</span> Md. Olyullah</p>
+              {/* <p><span className="font-semibold text-sky-500">Birth Date:</span> </p> */}
+              <p><span className="font-semibold text-sky-500">Address:</span> Jalalabad, West Khulshi ▪ Chattogram, Bangladesh</p>
+              {/* <p><span className="font-semibold text-sky-500">Language:</span> Bangla, English</p> */}
             </div>
             <div>
               <p><span className="font-semibold text-sky-500">Nationality:</span> Bangladeshi</p>
               <p><span className="font-semibold text-sky-500">Religion:</span> Islam</p>
-              <p><span className="font-semibold text-sky-500">Email:</span> md.habibullah7520@gmail.com</p>
-              <p><span className="font-semibold text-sky-500">Phone:</span> +8801609-111813, +8801736-591805</p>
+              <p><span className="font-semibold text-sky-500">Email:</span> olyalubayed@gmail.com</p>
+              <p><span className="font-semibold text-sky-500">Phone:</span>  +8801642649077</p>
             </div>
           </div>
 

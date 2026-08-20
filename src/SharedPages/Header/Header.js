@@ -33,7 +33,8 @@ const Header = () => {
         <div className="navbar bg-base-100 w-10/12 mx-auto rounded-full px-6">
           <div className="navbar-start">
             <Link to="/" className="btn btn-ghost normal-case text-xl">
-              <img src={logoImg} alt="logo" className="w-40" />
+              {/* <img src={logoImg} alt="logo" className="w-40" /> */}
+              <p className="text-sky-500">OLYULLAH</p>
             </Link>
           </div>
 
@@ -42,6 +43,7 @@ const Header = () => {
               <li><Link to="/">Home</Link></li>
               <li><a href="#aboutme">About</a></li>
               <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/resume">Resume</Link></li>
               <li tabIndex={0}>
                 <details>
                   <summary>Blogs</summary>
@@ -51,7 +53,6 @@ const Header = () => {
                   </ul>
                 </details>
               </li>
-              <li><Link to="/resume">Resume</Link></li>
             </ul>
           </div>
         </div>
@@ -95,11 +96,11 @@ const Header = () => {
 
           {/* Profile */}
           <a
-            href="https://wa.me/message/IVW4EW6JQQZ2M1"
+            href="https://wa.me/message/7R25KORMHHIDD1"
             _target="blank"
             rel="noreferrer"
             className={`text-gray-600 hover:text-sky-500 transition ${
-              location.pathname === "https://wa.me/message/IVW4EW6JQQZ2M1" && "text-sky-500"
+              location.pathname === "https://wa.me/message/7R25KORMHHIDD1" && "text-sky-500"
             }`}
           >
             <PiWhatsappLogoBold className="text-green-600" size={24} />

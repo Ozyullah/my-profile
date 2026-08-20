@@ -7,18 +7,23 @@ import Projects from '../../SharedPages/ShowProjects/Projects';
 import Comments from '../../SharedPages/Comments/Comments';
 import { Fade, LightSpeed, Roll, Bounce, Flash, Pulse, RubberBand, Pop, Slide, Spin, Swing } from 'react-swift-reveal';
 import Contact from '../ContactPage/Contact';
+import ProjectVideoGallery from '../../SharedPages/ShowProjects/Projects';
+import VideoGallery from '../../SharedPages/ShowProjects/Projects';
+import AdvancedVideoGallery from '../../SharedPages/ShowProjects/Projects';
 const Home = () => {
     return (
         <div>
 
             <Fade>
                 <Slider></Slider>
-                <Services></Services>
+                {/* <Services></Services>  */}
                 <AboutMe></AboutMe>
             </Fade>
             <Slide>
-                <MySkills></MySkills>
-                <Projects></Projects>
+                {/* <MySkills></MySkills> */}
+                {/* <Projects></Projects>
+                 */}
+                <AdvancedVideoGallery></AdvancedVideoGallery>
             </Slide>
             <Pop>
                 <Contact></Contact>

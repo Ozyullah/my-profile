@@ -1,92 +1,195 @@
-/* Section Title */
-.section-title {
-  font-size: 2.75rem;
-  font-weight: 800;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
+/* .skills-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  perspective: 1000px;
+} */
+
+/* Flip Card */
+/* .flip-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+} */
+
+/* .flip-card-inner {
   position: relative;
+  width: 100%;
+  height: 280px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
 }
 
-.section-title .highlight {
-  color: #38bdf8;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+
+/* Front & Back */
+/* .flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  color: white;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+} */
+
+/* .flip-card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
 }
 
-.section-subtitle {
-  font-size: 1rem;
-  color: #cbd5e1;
-  max-width: 600px;
-  margin: 0 auto;
+.skill-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
 }
 
-/* Grid Layout */
+.flip-card:hover .skill-logo {
+  transform: scale(1.1);
+}
+
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+} */
+
+/* Smooth hover glow */
+/* .flip-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25),
+              0 0 25px rgba(138, 43, 226, 0.2);
+} */
+
+/* Progress Bar Gradient */
+/* .gradient-bar {
+  background: linear-gradient(90deg, #00c6ff, #ff9a00);
+} */
+
+/* Tilt reset on mouse leave */
+/* .flip-card:active {
+  transform: rotateY(0deg) rotateX(0deg);
+} */
+
+
+
+
+
 .skills-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-/* Skill Card */
-.skill-card {
-  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 22px;
-  padding: 2rem;
-  text-align: center;
-  backdrop-filter: blur(20px);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+/* Flip card container */
+.flip-card {
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+  position: relative;
+  transform-style: preserve-3d;
 }
 
-.skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.3),
-              0 0 30px rgba(138, 43, 226, 0.25);
+/* Inner flipping */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
 }
 
-/* Skill Title */
-.skill-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 1.5rem;
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-/* Icon */
-.icon-wrap {
-  background: radial-gradient(circle, rgba(56,189,248,0.2), transparent);
-  border-radius: 50%;
-  padding: 1rem;
-  display: inline-flex;
+/* Both sides */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  color: var(--card-text);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: box-shadow 0.4s ease, background 0.4s ease;
+}
+
+/* Back */
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+/* Adaptive colors */
+:root {
+  --card-bg: #ffffff;
+  --card-text: #1e293b;
+}
+
+.dark :root,
+.dark {
+  --card-bg: #1e293b;
+  --card-text: #f8fafc;
+}
+
+/* Glow spotlight */
+.flip-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: radial-gradient(
+    circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    var(--glow-color, rgba(0, 198, 255, 0.25)),
+    transparent 70%
+  );
+  pointer-events: none;
+  transition: background 0.2s ease;
+}
+
+/* Hover effects */
+.flip-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 198, 255, 0.15);
+}
+
+/* Logos */
+.skill-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin-bottom: 1rem;
-}
-.icon-img {
-  width: 70px;
-  height: 70px;
+  transition: transform 0.4s ease;
 }
 
-/* Labels */
-.skill-label {
-  color: #e2e8f0;
-}
-.skill-percent {
-  font-weight: 600;
-  color: #38bdf8;
+.flip-card:hover .skill-logo {
+  transform: scale(1.1);
 }
 
-/* Gradient Progress Bar */
-.gradient-bar {
-  background: linear-gradient(90deg, #1e90ff, #8a2be2);
-  box-shadow: 0 0 12px rgba(30, 144, 255, 0.7),
-              0 0 24px rgba(138, 43, 226, 0.6);
-  transition: width 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+/* Title */
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--card-text);
 }
 
-.gradient-bar:hover {
-  box-shadow: 0 0 18px rgba(30, 144, 255, 0.9),
-              0 0 36px rgba(138, 43, 226, 0.85);
-}
