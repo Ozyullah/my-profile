@@ -7,6 +7,7 @@ import { MdOutlineFacebook } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { ImTwitter } from "react-icons/im";
 import { IoIosMailOpen } from "react-icons/io";
+import { IoLogoYoutube } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import image from "../../assets/images/OLYULLAH.png";
@@ -18,6 +19,7 @@ const socialIcons = [
   { icon: <IoLogoWhatsapp className="text-green-500 text-3xl" />, link: "https://wa.me/message/7R25KORMHHIDD1" },
   // { icon: <ImTwitter className="text-sky-400 text-2xl" />, link: "#" },
   { icon: <IoIosMailOpen className="text-red-500 text-3xl" />, link: "#" },
+  { icon: <IoLogoYoutube className="text-red-500 text-3xl" />, link: "https://www.youtube.com/@OLYULLAH-2026/videos" },
 ];
 
 const Slider = () => {
